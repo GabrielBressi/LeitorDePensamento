@@ -28,17 +28,14 @@ public class TelaGenio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         lblFrase = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         txtVal = new javax.swing.JSpinner();
         btnPalpite = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/genio.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 390, 380));
 
         lblFrase.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblFrase.setForeground(new java.awt.Color(0, 0, 0));
@@ -60,6 +57,10 @@ public class TelaGenio extends javax.swing.JFrame {
         });
         getContentPane().add(btnPalpite, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/genio.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 390, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -68,8 +69,8 @@ public class TelaGenio extends javax.swing.JFrame {
         int valor = (int) n;
         
         int num = Integer.parseInt(txtVal.getValue().toString());
-        String f1 = "ACERTOU!!!";
-        String f2 = "ERROU!Eu pensei no valor " + valor;
+        String f1 = "<html>ACERTOU!!!</html>";
+        String f2 = "<html>ERROU!Eu pensei no valor " + valor + "</html>";
         
         String res = (valor == num)? f1 : f2;
         
@@ -113,7 +114,7 @@ public class TelaGenio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPalpite;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblFrase;
     private javax.swing.JSpinner txtVal;
